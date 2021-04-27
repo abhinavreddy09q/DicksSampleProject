@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcv_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_item_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_item_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_item_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_item_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <ImageView
+            android:id="@+id/imv_item_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="@id/gl_item_bottom"
+            app:layout_constraintStart_toStartOf="@id/gl_item_left"
+            app:layout_constraintTop_toTopOf="@id/gl_item_top" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_location"
+            app:layout_constraintEnd_toEndOf="@id/gl_item_right"
+            app:layout_constraintStart_toEndOf="@id/imv_item_logo"
+            app:layout_constraintTop_toTopOf="@id/imv_item_logo"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Swift Technologies" />
+
+        <TextView
+            android:id="@+id/tv_item_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_date"
+            app:layout_constraintEnd_toEndOf="@id/gl_item_right"
+            app:layout_constraintStart_toStartOf="@id/tv_item_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_title"
+            tools:text="Philedelfia, PA" />
+
+        <TextView
+            android:id="@+id/tv_item_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/imv_item_logo"
+            app:layout_constraintEnd_toEndOf="@id/gl_item_right"
+            app:layout_constraintStart_toStartOf="@id/tv_item_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_location"
+            tools:text="WED,123 " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

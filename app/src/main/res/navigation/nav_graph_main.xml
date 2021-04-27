@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/seatGeekListFragment">
+
+    <fragment
+        android:id="@+id/seatGeekListFragment"
+        android:name="com.example.dicks.ui.SeatGeekListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_seat_geek_list">
+        <action
+            android:id="@+id/go_to_details"
+            app:destination="@id/seatGeekDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seatGeekDetailsFragment"
+        android:name="com.example.dicks.ui.SeatGeekDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_seat_geek_details">
+        <argument
+            android:name="itemSeatGeek"
+            app:argType="com.example.dicks.ui.ItemSeatGeek" />
+    </fragment>
+
+
+</navigation>
